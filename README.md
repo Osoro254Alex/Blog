@@ -150,11 +150,9 @@ If you like this project you can fork it.
 I would like to thank... <a href="https://www.microverse.org/?gclid=CjwKCAiArY2fBhB9EiwAWqHK6s-2-x4d57Pghz47XT1BgsYuF81ZprM-k-IwzI0_L96nV0SQ93A8ExoCVnQQAvD_BwE" title="planet icons">Microvers for giving me this opportunity to build this project</a>
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-<!-- LICENSE -->
+## 📝 License <a name="license"></a>
+ 
+This project is [MIT](https://github.com/Osoro254Alex/Blog/blob/dev/LICENSE) licensed.
 
-## :memo: License <a name="license"></a>
-This project is [MIT](https://choosealicense.com/licenses/mit/) licensed.
-
-_NOTE: we recommend using the [MIT license](https://choosealicense.com/licenses/mit/) - you can set it up quickly by [using templates available on GitHub](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/adding-a-license-to-a-repository). You can also use [any other license](https://choosealicense.com/licenses/) if you wish._
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
