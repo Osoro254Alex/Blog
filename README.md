@@ -12,7 +12,7 @@
   - [:hammer_and_wrench: Built With ](#-built-with-)
     - [Tech Stack ](#tech-stack-)
     - [Key Features ](#key-features-)
-  - [:rocket: Live Demo ](#-live-demo-)
+  - [:rocket: Project Link ](#-project-link-)
   - [:computer: Getting Started ](#-getting-started-)
     - [Prerequisites](#prerequisites)
     - [Setup](#setup)
@@ -63,8 +63,8 @@
 
 <!-- LIVE DEMO -->
 
-## :rocket: Live Demo <a name="live-demo"></a>
-- [Live Demo Link Comming Soon!]
+## :rocket: Project Link <a name="project link"></a>
+- [Project link](https://github.com/Osoro254Alex/Blog)
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 <!-- GETTING STARTED -->
