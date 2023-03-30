@@ -151,7 +151,7 @@ I would like to thank... <a href="https://www.microverse.org/?gclid=CjwKCAiArY2f
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 ## 📝 License <a name="license"></a>
- 
-This project is [MIT](https://github.com/Osoro254Alex/Blog/blob/dev/LICENSE) licensed.
+
+This project is [MIT](./LICENSE) licensed.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
