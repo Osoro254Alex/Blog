@@ -1,0 +1,13 @@
+<%= stylesheet_link_tag 'styles' %>
+  <li class="user_cont">
+  <div class="pic_cont">
+   <img class="img" src="<%= user.photo %>" alt="profile_pic">
+   </div>
+   <div class="user_content">
+    <h2><%= link_to user.name, user_path(user), class: "user_link" %></h2>
+    <p class="post-count">Number of posts: <%= user.posts_counter || 0 %></p>
+  </div>
+  </li>
+  
+
+
