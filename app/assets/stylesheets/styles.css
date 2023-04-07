@@ -65,7 +65,7 @@ body {
   border: 1px solid #e6e3e3bf;
 }
 
-  .post-head {
+.post-head {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -98,7 +98,6 @@ body {
 .posts_data {
   width: 100%;
 }
-
 
 .recent_comments {
   width: 90%;
