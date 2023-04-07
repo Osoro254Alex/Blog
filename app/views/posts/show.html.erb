@@ -1,9 +1,9 @@
 <section class="post_body">
-<%= content_tag :div, class: "post_container" do %>
-  <%= content_tag :div, class: "post-head" do %>
+ <div class="post_container">
+ <div class="post-head">
     <h4><%= content_tag :span, "Post # #{@post.id} by  #{@user.name}" %></h4>
     <%= content_tag :span, "Comments: #{@post.comments_counter} Likes: #{@post.likes_counter}" %>  
-  <% end %>
+  </div>
   <h1><%= @post.title %></h1>
   <%= @post.text %>
   <ul class="commentt">
@@ -13,5 +13,5 @@
       </li>
     <% end %>
   </ul>
-  <% end %>
-  </section>
+ </div>
+</section>
