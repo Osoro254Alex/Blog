@@ -1,26 +1,23 @@
 require 'rails_helper'
 RSpec.describe Like, type: :model do
-  describe 'Like Model Test' do
-    subject { Like.new(author_id: 5, post_id: 5) }
-    before { subject.save }
-    it 'The author_id should be number' do
-      subject.author_id = 'aaa'
-      expect(subject).to_not be_valid
+  let(:user) { User.create(name: 'Alice') }
+  let(:post) { Post.create(title: 'Post', text: 'Post body', author: user) }
+
+  describe 'callbacks' do
+    describe '#update_post_likes_counter' do
+      it 'updates the post likes counter' do
+        @like = Like.create(author: user, post:)
+        expect(post.reload.likes_counter).to eq(1)
+      end
     end
-    it 'The author_id should be integer' do
-      id = subject.author_id = 5
-      expect(id).to be == 5
-    end
-    it 'The post_id should be number' do
-      subject.post_id = 'bbb'
-      expect(subject).to_not be_valid
-    end
-    it 'The post_id should be integer' do
-      id = subject.post_id = 5
-      expect(id).to be == 5
-    end
-    it 'can update likes counter' do
-      expect(subject).to respond_to(:update_likes_counter)
+  end
+
+  describe '#update_post_likes_counter' do
+    context 'when a like is created' do
+      it 'updates the likes counter of the associated post' do
+        like = Like.new(author: user, post:)
+        expect { like.save }.to change { post.reload.likes_counter }.by(1)
+      end
     end
   end
 end
