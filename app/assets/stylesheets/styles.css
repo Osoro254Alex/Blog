@@ -1,0 +1,247 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0 90px;
+  font-family:
+    -apple-system,
+    BlinkMacSystemFont,
+    'Segoe UI',
+    'Roboto',
+    'Oxygen',
+    'Ubuntu',
+    'Cantarell',
+    'Fira Sans',
+    'Droid Sans',
+    'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f8f8ff;
+  overflow: scroll;
+}
+
+.user_body {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.users_container {
+  padding: 1.5rem;
+}
+
+.user_container {
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+}
+
+.posts_container {
+   padding: 1.5rem;
+}
+
+.post_body {
+   padding: 1.5rem;
+}
+
+.post_container {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: #f1efef;
+  padding: 1rem;
+  box-shadow: 0 10px 10px 5px #d1cecebf;
+  border: 1px solid #e6e3e3bf;
+}
+
+  .post-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 16px 0;
+}
+
+.commentt {
+  list-style-type: none;
+  padding: 0 16px 16px 0;
+}
+
+.posts_content{
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+  list-style: none;
+}
+
+.posts_cont {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: .2rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.posts_data {
+  width: 100%;
+}
+
+
+.recent_comments {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  border: 3px dashed #141416;
+  border-radius: .2rem;
+  padding: 0 .5rem;
+  margin-bottom: 1.5rem;
+}
+
+.comment {
+  font-style: italic;
+}
+
+.user {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.user_sec{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.users_contt {
+  width: 90%;
+  display: flex;
+  flex-direction: column;
+  padding: 1.3rem .5rem;
+  border: 1px solid grey;
+  border-radius: .5rem;
+}
+
+.users_cont {
+  list-style: none;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  row-gap: 1.5rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.user_link {
+  text-decoration: none;
+}
+
+.user_cont {
+ width: 90%;
+ display: flex;
+ column-gap: 1.5rem;
+ align-items: center;
+ justify-content: center;
+}
+
+.user_content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  border: 1px solid grey;
+  border-radius: .5rem;
+  padding: 1.3rem .5rem;
+}
+
+.pic_cont{
+  width: 5.5rem;
+  height: 5.5rem;
+  border-radius: .5rem;
+}
+
+.img {
+ width: 100%;
+ height: 100%;
+ border-radius: .5rem;
+}
+
+.post-count {
+  align-self: flex-end;
+}
+
+.will-paginate-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px 0;
+}
+
+.will-paginate-container a,
+.will-paginate-container span {
+  padding: 5px 10px;
+  margin: 0 5px;
+  border-radius: 3px;
+  color: #8828bf;
+  text-decoration: none;
+  border: 1px solid #ccc;
+}
+
+.will-paginate-container a:hover,
+.will-paginate-container span.current {
+  background-color:#8828bf;
+  color: #fff;
+  border-color: #8828bf;
+}
+
+button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #8828bf;
+  border: none;
+  color: #f7f2f2;
+  text-align: center;
+  font-size: 18px;
+  padding: 10px;
+  width: 150px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+  align-self: center;
+}
+
+button a {
+  text-decoration: none;
+  color: #f7f2f2;
+}
+
+@media screen and (max-width: 767px) {
+.post_container {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  background-color: #f1efef;
+  padding: .6rem;
+  box-shadow: 0 10px 10px 5px #d1cecebf;
+  border: 1px solid #e6e3e3bf;
+}
+}
