@@ -1,4 +1,6 @@
 <%= stylesheet_link_tag 'styles' %>
+<article>
+ <%= render 'repeats/header' %>
 <section class="user_container">
 <div class="post_container">
 <ul class="user">
@@ -18,3 +20,4 @@
  <button><%= link_to "See all posts", user_posts_path(@user) %></button>
 </div>
 </section >
+</article>
