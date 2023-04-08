@@ -1,0 +1,25 @@
+<%= stylesheet_link_tag 'styles' %>
+<section class="posts_container">
+  <%= render 'repeats/header' %>
+  <% if @post.errors.any? %>
+    <div>
+      <% @post.errors.full_messages.each do |message| %>
+      <p><%= message %></p>
+      <% end %>
+    </div>
+  <% end %>
+  <div class="new-post">
+  <h4>Add your message here:</h4>
+   <%= form_for [@user, @post], url:  user_posts_path(current_user), locale: true, method: :post do |form| %>
+  <label>Title</label>
+    <%= form.text_field :title, required: true, autofocus: true, class: "form-input" %>
+    <label>Message</label>
+      <%= form.text_area :text, required: true, autofocus: true, class: "form-input" %>
+      <%= form.hidden_field :user_id, value: current_user.id %>
+        <%= content_tag :div do %>
+          <button class="cancel-button"><%= link_to "Cancel", user_posts_path(current_user) %></button>
+          <%= form.submit "Save Post" %>
+        <% end %>
+  <% end %>
+  </div>
+</section>
