@@ -1,1 +1,19 @@
-<h1>This is User Post</h1>
+<section class="post_body">
+
+ <div class="post_container">
+ <div class="post-head">
+    <h4><%= content_tag :span, "Post # #{@post.id} by  #{@user.name}" %></h4>
+    <%= content_tag :span, "Comments: #{@post.comments_counter} Likes: #{@post.likes_counter}" %>  
+  </div>
+  <h1><%= @post.title %></h1>
+  <%= @post.text %>
+  <ul class="commentt">
+    <% @post.comments.each do |comment| %>
+      <li>
+        <%= content_tag :span, "#{comment.author.name} : #{comment.text}" %>
+      </li>
+    <% end %>
+  </ul>
+ </div>
+ 
+</section>

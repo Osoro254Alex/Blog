@@ -1,1 +1,11 @@
-<h1>This are Users</h1>
+<%= stylesheet_link_tag 'styles' %>
+
+<section class="users_container">
+<div class="post_container">
+<ul class="users_cont">
+<% @users.each do |user| %>
+    <%= render "repeats/users", user:user %>
+  <% end %>
+</ul>
+</div>
+</section>

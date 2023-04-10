@@ -1,1 +1,20 @@
-<h1>This is a User</h1>
+<%= stylesheet_link_tag 'styles' %>
+<section class="user_container">
+<div class="post_container">
+<ul class="user">
+  <%= render "repeats/users", user:@user %>
+  <li class="users_contt">
+    <h3>Bio</h3>
+    <%= @user.bio %>
+  </li>
+</ul>
+
+<ul class="users_cont">
+  <% @user.most_recent_posts.each_with_index do |post, index| %>
+   <%= render partial: "repeats/posts", locals: { post: post, index: index } %>
+  <% end %>
+</ul>
+ 
+ <button><%= link_to "See all posts", user_posts_path(@user) %></button>
+</div>
+</section >

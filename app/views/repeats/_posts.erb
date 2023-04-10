@@ -1,0 +1,8 @@
+<%= stylesheet_link_tag 'styles' %>
+  <li class="user_cont">
+   <div class="user_content">
+  <h3><%= link_to post.title, user_post_path(@user, post) %> #<%= index + 1 %> </h3>
+   <p><%= "#{post.text.slice(0, 100)}..." %></p>
+    <p class="post-count">Comments: <%= post.comments_counter || 0 %>,Likes: <%= post.likes_counter || 0 %></p>
+  </div>
+  </li>

@@ -1,18 +1,24 @@
 require 'rails_helper'
 
 RSpec.describe Comment, type: :model do
-  before :each do
-    @author = User.new(name: 'Alex',
-                       photo: 'https://thumbs.dreamstime.com/z/professional-development-programmer-working-programming-website-software-coding-technology-writing-codes-data-code-132331729.jpg', bio: 'Full-Stack software developer')
-    @post = Post.new(author_id: @author.id, title: 'Post for testing', text: 'This post is for test', comments_counter: 2)
-    @comment1 = Comment.create(author_id: @author.id, post: @post, text: 'Test comment1')
-    @comment2 = Comment.create(author_id: @author.id, post: @post, text: 'Test comment2')
+  let(:user) { User.create(name: 'Alice') }
+  let(:post) { Post.create(title: 'Post', text: 'Post body', author: user) }
+
+  describe 'callbacks' do
+    describe '#update_post_comments_counter' do
+      it 'updates the post comments counter' do
+        @comment = Comment.create(author: user, post:, text: 'Comment body')
+        expect(post.reload.comments_counter).to eq(1)
+      end
+    end
   end
-  it 'can not update comments counter when its a private method' do
-    expect(@comment1).to respond_to(:update_comments_counter)
-    expect(@comment2).to respond_to(:update_comments_counter)
-  end
-  it 'will have the post comments_counter through update_comments_counter' do
-    expect(@post.comments_counter).to eq 2
+
+  describe '#update_post_comments_counter' do
+    context 'when a comment is saved' do
+      it 'updates the comments counter of the associated post' do
+        comment = Comment.new(author: user, post:, text: 'Comment body')
+        expect { comment.save }.to change { post.reload.comments_counter }.by(1)
+      end
+    end
   end
 end
