@@ -4,23 +4,23 @@
 <section class="post_body">
  <div class="post_container">
  <div class="post-head">
-    <h4><%= content_tag :span, "📝 Post # #{@post.id} by  #{@user.name}" %></h4>
+    <h4><%= content_tag :span, "📝 Post # #{@post.id} by  #{@post.author.name}" %></h4>
     <%= content_tag :span, "Comments: #{@post.comments_counter} Likes: #{@post.likes_counter}" %>  
   </div>
     <%= content_tag :div, class: "post-likes" do %>
-      <%= button_to "🤍 Like", user_post_likes_path(user_id: current_user.id, post_id: @post.id), method: :post %>
+      <%= button_to "🖤 Like", user_post_likes_path(user_id: current_user.id, post_id: @post.id), method: :post %>
     <% end %>
     <h1><%= @post.title %></h1>
   <%= raw "<p>#{@post.text}</p>" %>
   <ul class="commentt">
    <h3>💬 Comments:</h3>
     <% @post.comments.each do |comment| %>
-      <li class="user-bio_div d-flex-2"><%= @user.name %>: <%= comment.text %></li>
+      <li class="user-bio_div d-flex-2"><%= comment.author.name %>: <%= comment.text %></li>
     <% end %>
   </ul>
  </div>
    <%= content_tag :div, class: "post-comments" do %>
-      <%= render "comments/create", locals: { post_id: @post_id, comment: Comment.new } %>
+      <%= render "comments/create", locals: { post_id: @post_id, comment: @comment } %>
     <% end %>
 </section>
 </article>
