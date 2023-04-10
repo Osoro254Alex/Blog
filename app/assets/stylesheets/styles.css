@@ -6,7 +6,7 @@
 
 body {
   margin: 0;
-  padding: 0 90px;
+  padding: 0 50px;
   font-family:
     -apple-system,
     BlinkMacSystemFont,
@@ -23,6 +23,50 @@ body {
   -moz-osx-font-smoothing: grayscale;
   background-color: #f8f8ff;
   overflow: scroll;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #fff;
+  padding: 4px 120px;
+  box-shadow: 0 10px 10px 5px #c7c6c6bf;
+  border: 1px solid #e6e3e3bf;
+}
+
+.title {
+  font-size: 34px;
+  font-weight: bold;
+  line-height: 32px;
+  padding: 0.5rem 0;
+  color: #087697;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+  gap: 24px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  right: 0;
+}
+
+.user-button {
+  background: #f1f3f4;
+  border: none;
+  cursor: pointer;
+  float: right;
+  outline: none;
+  border-radius: 100px;
+  height: 50px;
+  width: 50px;
+  margin: auto auto;
 }
 
 .user_body {
@@ -109,6 +153,7 @@ body {
   border-radius: 0.2rem;
   padding: 0 0.5rem;
   margin-bottom: 1.5rem;
+  word-break: break-all;
 }
 
 .comment {
@@ -210,6 +255,16 @@ button a {
   border: 1px solid #ccc;
 }
 
+.navBar a {
+  display: block;
+  font-size: 16px;
+  padding: 8px 8px;
+  text-decoration: none;
+  color: #979197;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+
 .will-paginate-container a:hover,
 .will-paginate-container span.current {
   background-color: #8828bf;
@@ -231,6 +286,89 @@ button {
   cursor: pointer;
   margin: 5px;
   align-self: center;
+}
+
+.navBar a:focus {
+  color: #262726f8;
+}
+
+.navBar a:hover {
+  color: #262726f8;
+}
+
+.post-comments {
+  padding: 16px 0;
+}
+
+.post-comments form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  gap: 8px;
+}
+
+button,
+input[type=submit] {
+  display: inline-block;
+  background-color: #6e6e6e;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 13px;
+  transition: all 0.3s ease;
+  text-align: center;
+  margin: 5px;
+}
+
+button:hover {
+  background-color: #333;
+}
+
+.post-likes {
+  padding: 0 0 24px 0;
+}
+
+.post-likes button {
+  background: none;
+  color: #000;
+  padding: 0;
+  margin: 0;
+  text-align: left;
+}
+
+.new-post {
+  height: 100%;
+}
+
+.new-post label {
+  width: 100%;
+  vertical-align: middle;
+}
+
+.new-post textarea {
+  height: 200px;
+}
+
+.new-post textarea,
+.post-comments form textarea,
+.new-post input[type=text] {
+  width: calc(100% - 20px);
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  resize: none;
+}
+
+.new-post input[type=text] {
+  height: 30px;
+}
+
+.post-comments form textarea {
+  height: 40px;
 }
 
 @media screen and (max-width: 767px) {

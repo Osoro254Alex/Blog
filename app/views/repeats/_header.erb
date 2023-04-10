@@ -1,0 +1,10 @@
+  <%= stylesheet_link_tag 'styles' %>
+  <header>
+    <h1 class="title">Blog App</h1>
+    <nav class="navbar">
+      <ul class="menu">
+        <li><%= link_to "Home", users_path %></li>
+        <li><%= link_to "Create New Post", new_user_post_path(current_user) %></li>
+      </ul>
+    </nav>
+  </header>
