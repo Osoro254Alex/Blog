@@ -30,7 +30,7 @@ header {
   justify-content: space-between;
   align-items: center;
   background-color: #fff;
-  padding: 4px 120px;
+  padding: 4px 1rem;
   box-shadow: 0 10px 10px 5px #c7c6c6bf;
   border: 1px solid #e6e3e3bf;
 }
@@ -47,6 +47,7 @@ header {
   display: flex;
   list-style: none;
   gap: 24px;
+  align-items: center;
 }
 
 .navbar {
@@ -54,6 +55,7 @@ header {
   justify-content: center;
   align-items: center;
   text-align: center;
+  column-gap: 1.5rem;
   right: 0;
 }
 
@@ -281,7 +283,6 @@ button {
   text-align: center;
   font-size: 18px;
   padding: 10px;
-  width: 150px;
   transition: all 0.5s;
   cursor: pointer;
   margin: 5px;
@@ -318,6 +319,19 @@ input[type=submit] {
   border-radius: 4px;
   cursor: pointer;
   font-size: 13px;
+  transition: all 0.3s ease;
+  text-align: center;
+  margin: 5px;
+}
+
+.home_signout {
+  display: inline-block;
+  background-color: #6e6e6e;
+  color: #fff;
+  padding: 0.6rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
   transition: all 0.3s ease;
   text-align: center;
   margin: 5px;
@@ -369,16 +383,4 @@ button:hover {
 
 .post-comments form textarea {
   height: 40px;
-}
-
-@media screen and (max-width: 767px) {
-  .post_container {
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    background-color: #f1efef;
-    padding: 0.6rem;
-    box-shadow: 0 10px 10px 5px #d1cecebf;
-    border: 1px solid #e6e3e3bf;
-  }
 }
