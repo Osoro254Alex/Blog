@@ -6,7 +6,6 @@ RSpec.describe 'User index', type: :feature do
     visit users_path
   end
 
-
   it 'Show author name' do
     expect(page).to have_content('Ellon')
   end
