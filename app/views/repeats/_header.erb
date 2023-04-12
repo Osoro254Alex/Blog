@@ -3,8 +3,17 @@
     <h1 class="title">Blog App</h1>
     <nav class="navbar">
       <ul class="menu">
-        <li><%= link_to "Home", users_path %></li>
-        <li><%= link_to "Create New Post", new_user_post_path(current_user) %></li>
+        <li><%= link_to "Home", users_path,class: "home-link" %></li>
+        <li><%= link_to "Create New Post", new_user_post_path(current_user), class: "edit-link" %></li>
+      </ul>
+      <ul class="logout_cont" >
+        <% if current_user %>
+            <li> <%= link_to "Edit Account", edit_user_registration_path, class: "edit-link" %></li>
+            <li> <%= button_to "Sign Out", destroy_user_session_path, method: :delete, class: "home_signout" %></li>
+          <% else %>
+            <li > <%= link_to "Sign Up", new_user_registration_path, class: "nav-link"  %></li>
+            <li > <%= link_to "Sign In", new_user_session_path, class: "nav-link"  %></li>
+          <% end %>
       </ul>
     </nav>
   </header>
