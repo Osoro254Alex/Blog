@@ -10,24 +10,30 @@
     <%= content_tag :div, class: "post-likes" do %>
       <%= button_to "🖤 Like", user_post_likes_path(user_id: current_user.id, post_id: @post.id), method: :post %>
     <% end %>
-    <h1><%= @post.title %></h1>
-  <%= raw "<p>#{@post.text}</p>" %>
-  <% if can? :destroy, @post %>
-  <%= button_to "DELETE", user_post_path(current_user, @post), method: :delete  %>
-  <%end%>
-  <ul class="commentt">
-   <h3>💬 Comments:</h3>
-    <% @post.comments.each do |comment| %>
-      <li class="">
-        <%= comment.author.name %>: <%= comment.text %>
+    <div class="comment_cont">
+      <h1><%= @post.title %></h1>
+      <span> 
+        <% if can? :destroy, @post %>
+        <%= button_to "DELETE POST", user_post_path(current_user, @post), method: :delete, class: "post_btn"  %>
+        <%end%>
+      </span>
+    </div>
+    <%= raw " <div class='about'><h4>About:</h4><p>#{@post.text}</p> </div>" %>
+    <ul class="commentt">
+    <h3>💬 Comments:</h3>
+      <% @post.comments.each do |comment| %>
+        <li class="comment_cont">
           <span>
-          <% if can? :destroy, comment %>
-          <%= button_to "DELETE", user_post_comment_path(comment.author, comment.post, comment), method: :delete  %>
-          <%end%>
-        </span>
-      </li>
-    <% end %>
-  </ul>
+            <%= comment.author.name %>: <%= comment.text %>
+          </span>
+          <span>
+            <% if can? :destroy, comment %>
+            <%= button_to "DELETE", user_post_comment_path(comment.author, comment.post, comment), method: :delete, class: "comment_btn" %>
+            <%end%>
+          </span>
+        </li>
+      <% end %>
+    </ul>
  </div>
    <%= content_tag :div, class: "post-comments" do %>
       <%= render "comments/create", locals: { post_id: @post_id, comment: @comment } %>
