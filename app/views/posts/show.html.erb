@@ -12,10 +12,16 @@
     <% end %>
     <h1><%= @post.title %></h1>
   <%= raw "<p>#{@post.text}</p>" %>
+  <% if can? :destroy, @post %>
+  <%= button_to "DELETE", user_post_path(current_user, @post), method: :delete  %>
+  <%end%>
   <ul class="commentt">
    <h3>💬 Comments:</h3>
     <% @post.comments.each do |comment| %>
       <li class="user-bio_div d-flex-2"><%= comment.author.name %>: <%= comment.text %></li>
+  <% if can? :destroy, comment %>
+  <%= button_to "DELETE", user_post_comment_path(comment.author, comment.post, comment), method: :delete  %>
+  <%end%>
     <% end %>
   </ul>
  </div>
