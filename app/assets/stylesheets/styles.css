@@ -384,3 +384,58 @@ button:hover {
 .post-comments form textarea {
   height: 40px;
 }
+
+.logout_cont {
+  list-style: none;
+  display: flex;
+  align-items: center;
+}
+
+.edit-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  padding: .4rem;
+  background-color:  #3F8FA7;
+  color: #fff;
+  border: 1px solid  #3F8FA7;
+  border-radius: .3rem;
+  box-shadow: 0 2px 0 2px #fff;
+}
+
+.edit-link:hover {
+  background-color: #154150;
+}
+
+.home-link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  padding: .4rem;
+  background-color:  #087697;
+  color: #fff;
+  border: 1px solid  #087697;
+  border-radius: .3rem;
+  box-shadow: 0 2px 0 2px #fff;
+}
+
+.home-link:hover {
+  background-color: #154150;
+}
+
+.new_user {
+ width: 100%;
+ display: flex;
+ text-align: center;
+ flex-direction: column;
+ justify-content: center;
+}
+
+.field .input {
+  width: 30%;
+}
+.login_btn {
+  width: 30%;
+}
