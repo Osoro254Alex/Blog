@@ -474,6 +474,27 @@ align-items: center;
   column-gap: .2rem;
 }
 
+.notification {
+  text-align: center;
+  height: 1.5rem;
+}
+
+.notice {
+  background-color: #0bf10b;
+  color: #fff;
+  width: 30%;
+  margin: auto;
+   border-radius: 1rem;
+}
+
+.alert {
+  background-color: #fa0808;
+  color: #fff;
+  width: 30%;
+  margin: auto;
+  border-radius: 1rem;
+}
+
 @media screen and (max-width: 767px) {
   .post_container {
     margin: 0;
