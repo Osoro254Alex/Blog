@@ -5,10 +5,10 @@ class PostsController < ApplicationController
   end
 
   def show
-    user_id = params[:user_id]
-    post_id = params[:id]
-    @post = Post.includes(:likes, :comments).find(post_id)
-    @user = User.find(user_id)
+    @user_id = params[:user_id]
+    @post_id = params[:id]
+    @post = Post.includes(:likes, :comments).find(@post_id)
+    @user = User.find(@user_id)
     @comment = Comment.new
   end
 
@@ -24,6 +24,18 @@ class PostsController < ApplicationController
     else
       render :new
       flash.alert = 'Error!, Post not added!'
+    end
+  end
+
+  def destroy
+    @post = Post.find(params[:id])
+    authorize! :destroy, @post
+    if @post.destroy
+      flash[:success] = 'post was successfully destroyed'
+      redirect_to user_posts_path(@post.author)
+    else
+      flash[:error] = 'Failed to destroy post'
+      redirect_to @post
     end
   end
 end

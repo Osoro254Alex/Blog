@@ -7,4 +7,16 @@ class CommentsController < ApplicationController
       render :new
     end
   end
+
+  def destroy
+    @comment = Comment.find(params[:id])
+    authorize! :destroy, @comment
+    if @comment.destroy
+      flash[:success] = 'Comment was successfully destroyed'
+      redirect_to user_post_path(@comment.post.author, @comment.post)
+    else
+      flash[:error] = 'Failed to destroy comment'
+      redirect_to @comment.post
+    end
+  end
 end
