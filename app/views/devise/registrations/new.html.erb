@@ -15,6 +15,11 @@
   </div>
 
   <div class="field">
+    <%= f.label :email_confirmation %><br />
+    <%= f.password_field :email_confirmation, autocomplete: "email" %>
+  </div>
+
+  <div class="field">
     <%= f.label :password %>
     <% if @minimum_password_length %>
     <em>(<%= @minimum_password_length %> characters minimum)</em>
@@ -34,3 +39,4 @@
 
 <%= render "devise/shared/links" %>
 </section>
+
