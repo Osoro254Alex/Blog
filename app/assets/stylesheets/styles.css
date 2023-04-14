@@ -386,9 +386,9 @@ button:hover {
 }
 
 .logout_cont {
-list-style: none;
-display: flex;
-align-items: center;
+  list-style: none;
+  display: flex;
+  align-items: center;
 }
 
 .edit-link {
@@ -396,11 +396,11 @@ align-items: center;
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  padding: .4rem;
-  background-color:  #3F8FA7;
+  padding: 0.4rem;
+  background-color: #3f8fa7;
   color: #fff;
-  border: 1px solid  #3F8FA7;
-  border-radius: .3rem;
+  border: 1px solid  #3f8fa7;
+  border-radius: 0.3rem;
   box-shadow: 0 2px 0 2px #fff;
 }
 
@@ -413,11 +413,11 @@ align-items: center;
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  padding: .4rem;
-  background-color:  #087697;
+  padding: 0.4rem;
+  background-color: #087697;
   color: #fff;
   border: 1px solid  #087697;
-  border-radius: .3rem;
+  border-radius: 0.3rem;
   box-shadow: 0 2px 0 2px #fff;
 }
 
@@ -426,14 +426,14 @@ align-items: center;
 }
 
 .new_user {
- width: 100%;
- display: flex;
- text-align: center;
- flex-direction: column;
- justify-content: center;
+  width: 100%;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
 }
 
- .field .input {
+.field .input {
   width: 30%;
 }
 
@@ -447,10 +447,10 @@ align-items: center;
 }
 
 .comment_btn {
-  padding: .2rem;
-  font-size: .7rem;
-  background-color:  #087697;
-  border-radius: .5rem;
+  padding: 0.2rem;
+  font-size: 0.7rem;
+  background-color: #087697;
+  border-radius: 0.5rem;
   color: #f60505;
   display: flex;
   align-items: center;
@@ -458,9 +458,9 @@ align-items: center;
 }
 
 .post_btn {
-  padding: .3rem;
-  font-size: .8rem;
-  background-color:  #6cbdd6;
+  padding: 0.3rem;
+  font-size: 0.8rem;
+  background-color: #6cbdd6;
   color: #f95454;
   display: flex;
   align-items: center;
@@ -470,8 +470,8 @@ align-items: center;
 .about {
   display: flex;
   align-items: center;
-  margin: 0 0 1rem .5rem;
-  column-gap: .2rem;
+  margin: 0 0 1rem 0.5rem;
+  column-gap: 0.2rem;
 }
 
 .notification {
@@ -484,7 +484,7 @@ align-items: center;
   color: #fff;
   width: 30%;
   margin: auto;
-   border-radius: 1rem;
+  border-radius: 1rem;
 }
 
 .alert {
