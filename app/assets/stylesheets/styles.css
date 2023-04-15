@@ -469,7 +469,6 @@ button:hover {
 
 .about {
   display: flex;
-  align-items: center;
   margin: 0 0 1rem 0.5rem;
   column-gap: 0.2rem;
 }
