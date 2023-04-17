@@ -467,10 +467,23 @@ button:hover {
   justify-content: center;
 }
 
+.like {
+  box-shadow: 0 6px 6px 5px #cccacabf;
+  border: 1px solid #dad8d8;
+  padding: 0.2rem !important; 
+  font-size: 1rem;
+  font-weight: 600;
+}
+
 .about {
   display: flex;
   margin: 0 0 1rem 0.5rem;
   column-gap: 0.2rem;
+}
+
+.comment_name{
+  font-weight: 600;
+  padding-right: .2rem;
 }
 
 .notification {

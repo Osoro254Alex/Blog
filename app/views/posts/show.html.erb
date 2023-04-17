@@ -8,7 +8,7 @@
     <%= content_tag :span, "Comments: #{@post.comments_counter} Likes: #{@post.likes_counter}" %>  
   </div>
     <%= content_tag :div, class: "post-likes" do %>
-      <%= button_to "🖤 Like", user_post_likes_path(user_id: current_user.id, post_id: @post.id), method: :post %>
+      <%= button_to "🖤 Like", user_post_likes_path(user_id: current_user.id, post_id: @post.id), method: :post, class: "like" %>
     <% end %>
     <div class="comment_cont">
       <h1><%= @post.title %></h1>
@@ -24,7 +24,7 @@
       <% @post.comments.each do |comment| %>
         <li class="comment_cont">
           <span>
-            <%= comment.author.name %>: <%= comment.text %>
+            <span class="comment_name"><%= comment.author.name %>:</span><span><%= comment.text %></span>
           </span>
           <span>
             <% if can? :destroy, comment %>
