@@ -1,6 +1,5 @@
 class CommentsController < ApplicationController
-
-    def index
+  def index
     @user = User.find(params[:user_id])
     @post = @user.posts.find(params[:post_id])
     @comments = @post.comments
@@ -12,7 +11,7 @@ class CommentsController < ApplicationController
 
   def create
     @comment = Comment.create(author_id: current_user.id, post_id: params[:post_id], text: params[:comment][:text])
-      respond_to do |format|
+    respond_to do |format|
       if @comment.save
         format.html do
           redirect_to user_post_path(@comment.author, @comment.post), notice: 'Comment was successfully created.'
