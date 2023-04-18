@@ -87,7 +87,7 @@ Clone this repository to your desired folder:
 ```
  - mkdir my-folder
  - cd my-folder
- - git clone git@github.com:SaboorSohaib/Blog-app.git
+ - git clone git@github.com:Osoro254Alex/Blog-app.git
  - cd Blog-app
  - bundle install
  - rails db:create
